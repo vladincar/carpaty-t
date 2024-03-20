@@ -508,12 +508,16 @@ footer .max-width :nth-child(3) :nth-child(2) {
     display: grid;
     margin-top: 93px;
     gap: 16px !important;
+    font-weight: 500;
   }
   footer .max-width :nth-child(2) {
     grid-template-columns: 1fr;
     gap: 32px 0;
     justify-self: center;
     text-align: center;
+  }
+  footer .max-width :nth-child(2) a {
+    font-weight: 400 !important;
   }
   footer .max-width :nth-child(2) :nth-child(5),
   footer .max-width :nth-child(2) :nth-child(6) {
@@ -722,7 +726,7 @@ footer .max-width :nth-child(3) :nth-child(2) {
   color: #222222;
   padding-bottom: 24px;
   grid-column: 1/3;
-  padding-top: 0;
+  padding-top: 15px;
 }
 .pro-nas-4 .max-width img {
   width: 100%;
@@ -742,9 +746,10 @@ footer .max-width :nth-child(3) :nth-child(2) {
   gap: 6px;
 }
 .pro-nas-4 .max-width form label {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.4rem;
   color: #101010;
+  padding-left: 3px;
 }
 .pro-nas-4 .max-width form input {
   height: 48px;
@@ -976,6 +981,10 @@ footer .max-width :nth-child(3) :nth-child(2) {
   .posluga-nav-blocks ul {
     width: 100%;
   }
+}
+.third-section.contacts .max-width {
+  padding-inline: 48px;
+  border-radius: 8px;
 }
 .third-section.contacts li {
   display: grid;
