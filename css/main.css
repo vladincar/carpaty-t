@@ -229,7 +229,6 @@ section h2 {
 .brands img {
   filter: grayscale(100%);
   width: 100%;
-  opacity: 0.8;
 }
 
 @media only screen and (max-width: 550px) {
