@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  background-image: url("/pics/main-header.jpg");
+  background-image: url("../pics/main-header.jpg");
   background-size: cover;
   background-position: 50% 20%;
   height: 600px;
