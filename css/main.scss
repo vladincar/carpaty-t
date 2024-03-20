@@ -75,6 +75,7 @@ nav {
     h1 {
         font-size: 3.2rem;
         color: white;
+        font-weight: 500;
     }
 }
 .nav-d .sub-nav {
@@ -212,7 +213,7 @@ section {
             169.99deg,
             rgba(42, 134, 218, 0.29) 17.48%,
             rgba(73, 102, 204, 0.24) 55.29%,
-            rgba(100, 160, 214, 0) 88.38%
+            rgba(100, 160, 214, 0) 70.38%
         );
     }
     .poslugi-blocks {
@@ -632,9 +633,9 @@ footer {
         display: flex;
         gap: 32px;
         align-items: center;
-/*         background: #f9fbff;
+       
         border: 1px solid #eff0f2;
-        border-radius: 16px; */
+        border-radius: 16px; 
         padding: 76px 47px;
         :nth-child(1) {
             font-size: 4.8rem;
@@ -664,9 +665,9 @@ footer {
     margin: 0 20px;
 }
 .pro-nas-3 .max-width {
-/*     background: #f9fbff;
+  
     border: 1px solid #eff0f2;
-    border-radius: 8px; */
+    border-radius: 8px; 
     padding: 56px 48px;
     h2 {
         font-weight: 500;
@@ -807,6 +808,7 @@ footer {
             border-radius: 7px;
             cursor: pointer;
             font-size: 1.6rem;
+            font-weight: 500;
             &:hover {
                 background-color: #2e89d9;
             }
@@ -833,6 +835,7 @@ footer {
             display: block;
             grid-column: 1/3;
             height: 30vh;
+            margin-bottom: 24px;
         }
         h2 {
             font-size: 2.2rem;
@@ -1026,6 +1029,9 @@ footer {
         :nth-child(1) {
             font-weight: 800;
         }
+    }
+    a{
+        color: #222222 !important;
     }
 }
 @media only screen and (max-width: 550px) {
