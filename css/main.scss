@@ -1,6 +1,6 @@
 html {
     font-size: 62.5%;
-    font-family: "SF UI Display", sans-serif;
+    font-family: "SF Display", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -27,12 +27,13 @@ nav {
     justify-content: space-between;
     font-size: 1.6rem;
     color: white;
+    font-weight: 400;
     a {
         color: white;
         text-decoration: none;
     }
     li > a {
-        font-weight: 700;
+        font-weight: 500;
     }
     .logo img {
         width: 62px;
@@ -99,7 +100,7 @@ nav {
     li {
         position: relative;
         padding: 9px 10px;
-        border-radius: 15px;
+        border-radius: 8px;
         cursor: pointer;
         &:hover {
             background-color: #b0e3ff;
@@ -174,6 +175,11 @@ section {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    :nth-child(5),:nth-child(6),:nth-child(7){
+        position: relative;
+        left: 50%;
+       //transform: translateX(50%);
+    }
 }
 .poslugi-block {
     position: relative;
@@ -207,6 +213,16 @@ section {
     }
 }
 
+@media only screen and (max-width: 1125px) {
+    .poslugi-blocks {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+        :nth-child(5),:nth-child(6),:nth-child(7){
+            left: 0;
+        }
+    }
+}
 @media only screen and (max-width: 550px) {
     .first-section {
         background: linear-gradient(
@@ -295,10 +311,11 @@ section {
     padding: 3px;
 
     p {
-        font-weight: 600;
+        font-weight: 500;
         border-radius: 8px;
         padding: 9px 16.2px;
         cursor: pointer;
+        color: #71BBFE;
     }
     .pSelected {
         background-color: #0b7be2;
@@ -421,7 +438,6 @@ section {
         grid-template-columns: 1fr 1fr;
         gap: 32px 24px;
         label {
-            font-weight: 500;
             font-size: 1.4rem;
             color: #101010;
         }
@@ -430,8 +446,10 @@ section {
             border: none;
             border-radius: 7px;
             padding-left: 10px;
+            font-weight: 400;
             &::placeholder {
                 color: #bfcbd7;
+                 font-weight: 400;
             }
         }
         div {
@@ -753,7 +771,7 @@ footer {
         color: #222222;
         padding-bottom: 24px;
         grid-column: 1/3;
-        padding-top: 15px;
+        padding-top: 25px;
     }
     img {
         width: 100%;
@@ -885,11 +903,16 @@ footer {
 ///
 .posluga-info .max-width {
     margin-bottom: 71px;
+    h2{
+        max-width: 829px;
+        margin-inline: auto;
+    }
     > div {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
         .poslugi-text {
+            min-height: 20vh;
             padding: 55px 47px;
             border: 1px solid #eff0f2;
             box-shadow: 1px 1px 10px rgba(23, 27, 67, 0.1);
@@ -974,9 +997,10 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 20px 24px;
         width: 90%;
-
         a {
-            padding: 16px;
+            display: grid;
+            align-items: center;
+            padding: 5px 16px;
             background: #fbfcfe;
             border: 1px solid #71bbfe;
             border-radius: 8px;

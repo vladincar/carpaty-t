@@ -1,6 +1,6 @@
 html {
   font-size: 62.5%;
-  font-family: "SF UI Display", sans-serif;
+  font-family: "SF Display", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  background-image: url("../pics/main-header.jpg");
+  background-image: url("/pics/main-header.jpg");
   background-size: cover;
   background-position: 50% 20%;
   height: 600px;
@@ -28,13 +28,14 @@ nav {
   justify-content: space-between;
   font-size: 1.6rem;
   color: white;
+  font-weight: 400;
 }
 nav a {
   color: white;
   text-decoration: none;
 }
 nav li > a {
-  font-weight: 700;
+  font-weight: 500;
 }
 nav .logo img {
   width: 62px;
@@ -100,7 +101,7 @@ nav > ul li:hover > .sub-nav {
 .nav-d .sub-nav li {
   position: relative;
   padding: 9px 10px;
-  border-radius: 15px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .nav-d .sub-nav li:hover {
@@ -166,6 +167,10 @@ section h2 {
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
 }
+.poslugi-blocks :nth-child(5), .poslugi-blocks :nth-child(6), .poslugi-blocks :nth-child(7) {
+  position: relative;
+  left: 50%;
+}
 
 .poslugi-block {
   position: relative;
@@ -199,6 +204,16 @@ section h2 {
   transition: 1s linear;
 }
 
+@media only screen and (max-width: 1125px) {
+  .poslugi-blocks {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  }
+  .poslugi-blocks :nth-child(5), .poslugi-blocks :nth-child(6), .poslugi-blocks :nth-child(7) {
+    left: 0;
+  }
+}
 @media only screen and (max-width: 550px) {
   .first-section {
     background: linear-gradient(169.99deg, rgba(42, 134, 218, 0.29) 17.48%, rgba(73, 102, 204, 0.24) 55.29%, rgba(100, 160, 214, 0) 70.38%);
@@ -280,10 +295,11 @@ section h2 {
   padding: 3px;
 }
 .carusel-control p {
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 8px;
   padding: 9px 16.2px;
   cursor: pointer;
+  color: #71BBFE;
 }
 .carusel-control .pSelected {
   background-color: #0b7be2;
@@ -394,7 +410,6 @@ section h2 {
   gap: 32px 24px;
 }
 .third-section form > div label {
-  font-weight: 500;
   font-size: 1.4rem;
   color: #101010;
 }
@@ -403,12 +418,15 @@ section h2 {
   border: none;
   border-radius: 7px;
   padding-left: 10px;
+  font-weight: 400;
 }
 .third-section form > div input::-moz-placeholder {
   color: #bfcbd7;
+  font-weight: 400;
 }
 .third-section form > div input::placeholder {
   color: #bfcbd7;
+  font-weight: 400;
 }
 .third-section form > div div {
   display: grid;
@@ -726,7 +744,7 @@ footer .max-width :nth-child(3) :nth-child(2) {
   color: #222222;
   padding-bottom: 24px;
   grid-column: 1/3;
-  padding-top: 15px;
+  padding-top: 25px;
 }
 .pro-nas-4 .max-width img {
   width: 100%;
@@ -862,12 +880,17 @@ footer .max-width :nth-child(3) :nth-child(2) {
 .posluga-info .max-width {
   margin-bottom: 71px;
 }
+.posluga-info .max-width h2 {
+  max-width: 829px;
+  margin-inline: auto;
+}
 .posluga-info .max-width > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 .posluga-info .max-width > div .poslugi-text {
+  min-height: 20vh;
   padding: 55px 47px;
   border: 1px solid #eff0f2;
   box-shadow: 1px 1px 10px rgba(23, 27, 67, 0.1);
@@ -949,7 +972,9 @@ footer .max-width :nth-child(3) :nth-child(2) {
   width: 90%;
 }
 .posluga-nav-blocks ul a {
-  padding: 16px;
+  display: grid;
+  align-items: center;
+  padding: 5px 16px;
   background: #fbfcfe;
   border: 1px solid #71bbfe;
   border-radius: 8px;
