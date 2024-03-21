@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карпат Техно Альянс</title>
-    <link href="https://fonts.cdnfonts.com/css/sf-ui-display" rel="stylesheet">
+    <link rel="preconnect" href="//fdn.fontcdn.ir">
+<link rel="preconnect" href="//v1.fontapi.ir">
+<link href="https://v1.fontapi.ir/css/SFUIDisplay" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header>
+    <header id='header'>
         <div class="max-width">
             <nav>
                 <div class="logo">
@@ -148,48 +150,81 @@
                 <h2>Як ми працюємо</h2>
                 <ul>
                     <li>
-                        <p>м. Одеса</p>
-                        <p>тел. +38 (096) 499 82 10; +380 (800) 300 878</p>
-                        <p>E-mail: kta.odessa@gmail.com</p>
+                        <p style="font-weight: 600;">м. Одеса</p>
+                        <p><span style="font-weight: 500;">тел.</span> +38 (096) 499 82 10; +380 (800) 300 878</p>
+                        <p><span style="font-weight: 500;">E-mail: kta.odessa@gmail.com</p>
                     </li>
                     <li>
-                        <p>м. Харків</p>
+                        <p style="font-weight: 600;">м. Харків</p>
                         <p>пр-т Героїв Харкова, 199 «Д-5»</p>
-                        <p>тел. +38 (093) 988 74 89;</p>
-                        <p>E-mail: kta.kharkiv@gmail.com</p>
+                        <p><span style="font-weight: 500;">тел.</span> +38 (093) 988 74 89;</p>
+                        <p><span style="font-weight: 500;">E-mail:</span> kta.kharkiv@gmail.com</p>
                     </li>
                     <li>
-                        <p>м. Київ</p>
+                        <p style="font-weight: 600;">м. Київ</p>
                         <p>вул. Рогнідинська, 4а</p>
-                        <p>тел. +38 (066) 366 35 65; +38(044) 222 62 25;</p>
-                        <p>E-mail: ktalliance.office@gmail.com</p>
+                        <p><span style="font-weight: 500;">тел.</span> +38 (066) 366 35 65; +38(044) 222 62 25;</p>
+                        <p><span style="font-weight: 500;">E-mail:</span> ktalliance.office@gmail.com</p>
                     </li>
                     <li>
-                        <p>м. Івано-Франківськ</p>
+                        <p style="font-weight: 600;">м. Івано-Франківськ</p>
                         <p>вул. Вовчинецька, 225</p>
-                        <p>тел. +38 (067) 344 48 17; +38 (050) 175 38 20</p>
-                        <p>E-mail: ktalliance.office@gmail.com;</p>
+                        <p><span style="font-weight: 500;">тел.</span> +38 (067) 344 48 17; +38 (050) 175 38 20</p>
+                        <p><span style="font-weight: 500;">E-mail:</span> ktalliance.office@gmail.com;</p>
                         <p>kta.adr@gmail.com (Заявки на перевірку цистерн)</p>
                     </li>
                     <li>
-                        <p>м. Полтава</p>
+                        <p style="font-weight: 600;">м. Полтава</p>
                         <p>вул. Н. Левицького, 5, к. 1</p>
-                        <p>тел. +38 (099) 366 96 57</p>
-                        <p>E-mail: ktalliance.poltava@gmail.com</p>
+                        <p><span style="font-weight: 500;">тел.</span> +38 (099) 366 96 57</p>
+                        <p><span style="font-weight: 500;"> E-mail:</span> ktalliance.poltava@gmail.com</p>
                     </li>
                     
                 </ul>
             </div>
         </section>
-
+        <section class="pro-nas-4">
+            <div class="max-width">
+             <div class="formImg">
+                <img src="pics/proNas/2.png" alt="">
+             </div>
+             <form action="">
+                <h2>Зв’язатися з нами</h2>
+                <div class="formImgMob">
+                    <img src="pics/proNas/2.png" alt="">
+                 </div>
+                <div>
+                    <label for="text-1">Ваше ім’я</label>
+                    <input type="text-1" id="text-1" placeholder="Ім’я">
+                </div>
+                <div>
+                    <label for="text-2">Ваше прізвище</label>
+                    <input type="text" id="text-2" placeholder="Прізвище">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div>
+                    <label for="tel">Номер телефону</label>
+                    <input type="tel" id="tel" placeholder="+380 (095) 123 45 67">
+                </div>
+                <div class="textarea">
+                    <label for="textarea">Повідомлення</label>
+                    <textarea name="" id="textarea" placeholder="Повідомлення"></textarea>
+                </div>
+                <button>Відправити</button>
+             </form>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="max-width">
-            <img src="pics/logo.png" alt="">
+           <a href="#header"><img src="pics/logo.png" alt=""></a> 
             <ul>
-                <li><a href="pro-nas.html" style="font-weight: 700;">Про нас</a></li>
-                <li><a href="#poslugi" style="font-weight: 700;">Послуги</a></li>
-                <li><a href="contacts.html" style="font-weight: 700;">Контакти</a></li>
+                <li><a href="pro-nas.html">Про нас</a></li>
+                <li><a href="index.html#poslugi" >Послуги</a></li>
+                <li><a href="contacts.html"">Контакти</a></li>
                 <li><a href="documents.html">Документи</a></li>
                 <li></li>
                 <li></li>

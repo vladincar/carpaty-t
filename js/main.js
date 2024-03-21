@@ -43,3 +43,10 @@ menuBox2.addEventListener('click',()=>{
         });
         controlButtons[currentSlide - 1].classList.add('pSelected');
     }
+
+
+    //adjust images
+    const posl_img = document.querySelector('.posl-img');
+    const poslugi_text = document.querySelector('.poslugi-text').offsetHeight;
+
+    posl_img.setAttribute("height",`${poslugi_text}px`);

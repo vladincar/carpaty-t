@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
-  font-family: "SF UI Display", sans-serif;
+  font-family: "SF Display", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,13 +28,14 @@ nav {
   justify-content: space-between;
   font-size: 1.6rem;
   color: white;
+  font-weight: 400;
 }
 nav a {
   color: white;
   text-decoration: none;
 }
 nav li > a {
-  font-weight: 700;
+  font-weight: 500;
 }
 nav .logo img {
   width: 62px;
@@ -60,10 +62,11 @@ nav > ul li:hover > .sub-nav {
   font-weight: 700px;
   background-color: rgba(11, 123, 226, 0.5);
   border-radius: 15px;
-  width: 615px;
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
-  padding-block: 53px;
   margin: 13% auto;
+  padding: 33px 63px;
 }
 .header-name h2 {
   font-size: 2.8rem;
@@ -73,6 +76,7 @@ nav > ul li:hover > .sub-nav {
 .header-name h1 {
   font-size: 3.2rem;
   color: white;
+  font-weight: 500;
 }
 
 .nav-d .sub-nav {
@@ -97,7 +101,7 @@ nav > ul li:hover > .sub-nav {
 .nav-d .sub-nav li {
   position: relative;
   padding: 9px 10px;
-  border-radius: 15px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .nav-d .sub-nav li:hover {
@@ -130,7 +134,8 @@ nav > ul li:hover > .sub-nav {
     display: none;
   }
   .header-name {
-    width: 90%;
+    width: -moz-fit-content;
+    width: fit-content;
     padding-block: 35px;
     margin: 170px auto;
   }
@@ -161,6 +166,13 @@ section h2 {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  grid-template-rows: 1fr 1fr;
+}
+.poslugi-blocks :nth-child(5), .poslugi-blocks :nth-child(6), .poslugi-blocks :nth-child(7) {
+  position: relative;
+  left: 50%;
+  gap: 22px;
+  grid-template-rows: auto 1fr auto;
 }
 
 .poslugi-block {
@@ -195,7 +207,21 @@ section h2 {
   transition: 1s linear;
 }
 
+@media only screen and (max-width: 1125px) {
+  .poslugi-blocks {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  }
+  .poslugi-blocks :nth-child(5), .poslugi-blocks :nth-child(6), .poslugi-blocks :nth-child(7) {
+    left: 0;
+    position: relative;
+  }
+}
 @media only screen and (max-width: 550px) {
+  .first-section {
+    background: linear-gradient(169.99deg, rgba(42, 134, 218, 0.29) 17.48%, rgba(73, 102, 204, 0.24) 55.29%, rgba(100, 160, 214, 0) 70.38%);
+  }
   .poslugi-blocks {
     gap: 24px;
   }
@@ -273,10 +299,11 @@ section h2 {
   padding: 3px;
 }
 .carusel-control p {
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 8px;
   padding: 9px 16.2px;
   cursor: pointer;
+  color: #71BBFE;
 }
 .carusel-control .pSelected {
   background-color: #0b7be2;
@@ -332,7 +359,7 @@ section h2 {
   width: 456px;
   min-width: 100%;
   height: 64px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 8px;
 }
 .third-section ul a {
@@ -342,6 +369,7 @@ section h2 {
 .third-section ul a li {
   background-color: #57a1e3;
   border: none;
+  font-weight: 600;
 }
 .third-section ul a li:hover {
   background-color: #2f8de1;
@@ -386,7 +414,6 @@ section h2 {
   gap: 32px 24px;
 }
 .third-section form > div label {
-  font-weight: 500;
   font-size: 1.4rem;
   color: #101010;
 }
@@ -395,12 +422,15 @@ section h2 {
   border: none;
   border-radius: 7px;
   padding-left: 10px;
+  font-weight: 400;
 }
 .third-section form > div input::-moz-placeholder {
   color: #bfcbd7;
+  font-weight: 400;
 }
 .third-section form > div input::placeholder {
   color: #bfcbd7;
+  font-weight: 400;
 }
 .third-section form > div div {
   display: grid;
@@ -416,6 +446,13 @@ section h2 {
   font-weight: 600;
   height: 56px;
   border-radius: 7px;
+  cursor: pointer;
+}
+.third-section form button:hover {
+  background-color: #0b5af3;
+}
+.third-section form button:active {
+  background-color: #1d64cf;
 }
 
 @media only screen and (max-width: 550px) {
@@ -438,7 +475,7 @@ section h2 {
 }
 footer {
   background-color: #57a1e3;
-  padding: 33px 0;
+  padding: 53px 0 63px;
 }
 footer a,
 footer li {
@@ -452,12 +489,22 @@ footer .max-width {
   display: grid;
   grid-template-columns: auto auto auto;
 }
+footer .max-width > :nth-child(2) {
+  font-weight: 400 !important;
+}
+footer .max-width > :nth-child(2) > :nth-child(1),
+footer .max-width > :nth-child(2) > :nth-child(2),
+footer .max-width > :nth-child(2) > :nth-child(3) {
+  font-weight: 500;
+}
 footer .max-width :nth-child(2) {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 17px 0;
+  grid-template-columns: max-content max-content max-content;
+  gap: 17px 10px;
+  font-weight: 400;
 }
 footer .max-width :nth-child(3) {
+  font-weight: 500;
   display: grid;
   grid-template-columns: auto auto;
   justify-self: end;
@@ -466,11 +513,12 @@ footer .max-width :nth-child(3) {
 footer .max-width :nth-child(3) :nth-child(2) {
   grid-row: 1/6;
   grid-column: 2;
+  line-height: 150%;
 }
 
 @media only screen and (max-width: 850px) {
   footer {
-    padding: 48px 0;
+    padding: 58px 0 68px;
   }
   footer img {
     max-width: 56px;
@@ -482,6 +530,7 @@ footer .max-width :nth-child(3) :nth-child(2) {
     display: grid;
     margin-top: 93px;
     gap: 16px !important;
+    font-weight: 500;
   }
   footer .max-width :nth-child(2) {
     grid-template-columns: 1fr;
@@ -489,9 +538,15 @@ footer .max-width :nth-child(3) :nth-child(2) {
     justify-self: center;
     text-align: center;
   }
+  footer .max-width :nth-child(2) a {
+    font-weight: 400 !important;
+  }
   footer .max-width :nth-child(2) :nth-child(5),
   footer .max-width :nth-child(2) :nth-child(6) {
     display: none;
+  }
+  footer .max-width :nth-child(2) :nth-child(3) {
+    grid-row: 5;
   }
   footer .max-width :nth-child(3) {
     grid-template-columns: 1fr;
@@ -501,6 +556,7 @@ footer .max-width :nth-child(3) :nth-child(2) {
   footer .max-width :nth-child(3) :nth-child(2) {
     grid-row: 3;
     grid-column: 1;
+    line-height: 150%;
   }
 }
 .pro-nas-1 .max-width {
@@ -573,7 +629,6 @@ footer .max-width :nth-child(3) :nth-child(2) {
   display: flex;
   gap: 32px;
   align-items: center;
-  background: #f9fbff;
   border: 1px solid #eff0f2;
   border-radius: 16px;
   padding: 76px 47px;
@@ -606,7 +661,6 @@ footer .max-width :nth-child(3) :nth-child(2) {
 }
 
 .pro-nas-3 .max-width {
-  background: #f9fbff;
   border: 1px solid #eff0f2;
   border-radius: 8px;
   padding: 56px 48px;
@@ -684,6 +738,7 @@ footer .max-width :nth-child(3) :nth-child(2) {
   border-radius: 8px;
   background-color: white;
   margin: 129px auto;
+  width: 85%;
 }
 .pro-nas-4 .max-width h2 {
   text-align: left;
@@ -693,7 +748,7 @@ footer .max-width :nth-child(3) :nth-child(2) {
   color: #222222;
   padding-bottom: 24px;
   grid-column: 1/3;
-  padding-top: 0;
+  padding-top: 25px;
 }
 .pro-nas-4 .max-width img {
   width: 100%;
@@ -713,9 +768,10 @@ footer .max-width :nth-child(3) :nth-child(2) {
   gap: 6px;
 }
 .pro-nas-4 .max-width form label {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.4rem;
   color: #101010;
+  padding-left: 3px;
 }
 .pro-nas-4 .max-width form input {
   height: 48px;
@@ -740,14 +796,13 @@ footer .max-width :nth-child(3) :nth-child(2) {
   border-radius: 7px;
   padding-left: 10px;
   background-color: #f7f7f7;
+  padding-top: 10px;
 }
 .pro-nas-4 .max-width form .textarea textarea::-moz-placeholder {
   color: #bfcbd7;
-  padding-top: 5px;
 }
 .pro-nas-4 .max-width form .textarea textarea::placeholder {
   color: #bfcbd7;
-  padding-top: 5px;
 }
 .pro-nas-4 .max-width form button {
   grid-column: 1/3;
@@ -757,6 +812,18 @@ footer .max-width :nth-child(3) :nth-child(2) {
   outline: none;
   height: 56px;
   border-radius: 7px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.pro-nas-4 .max-width form button:hover {
+  background-color: #2e89d9;
+}
+.pro-nas-4 .max-width form button:active {
+  background-color: #2b82d0;
+}
+.pro-nas-4 .max-width .formImgMob {
+  display: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -770,11 +837,19 @@ footer .max-width :nth-child(3) :nth-child(2) {
     margin: 124px auto;
     grid-template-columns: 1fr;
   }
+  .pro-nas-4 .max-width .formImgMob {
+    display: block;
+    grid-column: 1/3;
+    height: 30vh;
+    margin-bottom: 24px;
+  }
   .pro-nas-4 .max-width h2 {
     font-size: 2.2rem;
     line-height: 29px;
     color: #222222;
     grid-column: 1/3;
+    text-align: center;
+    padding-bottom: 0;
   }
   .pro-nas-4 .max-width .formImg {
     display: none;
@@ -783,6 +858,9 @@ footer .max-width :nth-child(3) :nth-child(2) {
 @media only screen and (max-width: 500px) {
   .pro-nas-4 .max-width {
     padding: 32px 16px;
+  }
+  .pro-nas-4 .max-width .formImgMob {
+    grid-column: 1;
   }
   .pro-nas-4 .max-width h2 {
     text-align: center;
@@ -806,12 +884,17 @@ footer .max-width :nth-child(3) :nth-child(2) {
 .posluga-info .max-width {
   margin-bottom: 71px;
 }
+.posluga-info .max-width h2 {
+  max-width: 829px;
+  margin-inline: auto;
+}
 .posluga-info .max-width > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 .posluga-info .max-width > div .poslugi-text {
+  min-height: 20vh;
   padding: 55px 47px;
   border: 1px solid #eff0f2;
   box-shadow: 1px 1px 10px rgba(23, 27, 67, 0.1);
@@ -820,13 +903,17 @@ footer .max-width :nth-child(3) :nth-child(2) {
   font-size: 1.6rem;
   line-height: 28px;
   color: #222222;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .posluga-info .max-width > div .poslugi-text :nth-child(2) {
   margin-top: 32px;
 }
 .posluga-info .max-width > div img {
-  width: 100%;
-  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 7px;
@@ -886,9 +973,12 @@ footer .max-width :nth-child(3) :nth-child(2) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px 24px;
+  width: 90%;
 }
 .posluga-nav-blocks ul a {
-  padding: 16px;
+  display: grid;
+  align-items: center;
+  padding: 5px 16px;
   background: #fbfcfe;
   border: 1px solid #71bbfe;
   border-radius: 8px;
@@ -896,14 +986,35 @@ footer .max-width :nth-child(3) :nth-child(2) {
   text-decoration: none;
   line-height: 24px;
   font-size: 1.4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.posluga-nav-blocks ul a:hover {
+  background-color: #57A1E3;
+  color: white;
+}
+.posluga-nav-blocks ul a:active {
+  background-color: #2b82d0;
 }
 .posluga-nav-blocks .active {
   background-color: #57a1e3;
+}
+.posluga-nav-blocks .active:hover {
+  background-color: #2F8DE1;
 }
 .posluga-nav-blocks .active li {
   color: white;
 }
 
+@media only screen and (max-width: 1300px) {
+  .posluga-nav-blocks ul {
+    width: 100%;
+  }
+}
+.third-section.contacts .max-width {
+  padding-inline: 48px;
+  border-radius: 8px;
+}
 .third-section.contacts li {
   display: grid;
   height: auto;
@@ -919,6 +1030,9 @@ footer .max-width :nth-child(3) :nth-child(2) {
 .third-section.contacts li :nth-child(1) {
   font-weight: 800;
 }
+.third-section.contacts a {
+  color: #222222 !important;
+}
 
 @media only screen and (max-width: 550px) {
   .third-section.contacts li {
@@ -931,6 +1045,7 @@ footer .max-width :nth-child(3) :nth-child(2) {
 
 .documents .max-width {
   padding-top: 80px;
+  padding-bottom: 128px;
 }
 .documents .max-width h2 {
   padding-top: 0;
@@ -954,22 +1069,31 @@ footer .max-width :nth-child(3) :nth-child(2) {
 .documents a {
   color: white;
   text-decoration: none;
-  background-color: #248FEE;
+  background-color: #248fee;
   padding: 1em 1.1em;
   border-radius: 7px;
+  cursor: pointer;
+}
+.documents a:hover {
+  background-color: #0b5af3;
+}
+.documents a:active {
+  background-color: #1d64cf;
 }
 
 .documents.single > div > div {
   display: grid;
   justify-content: center;
   justify-items: center;
+  justify-self: center;
+  margin-inline: 25.5%;
 }
 .documents.single .doc-imgs {
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
+  justify-content: center;
   justify-items: center;
-}
-.documents.single .doc-imgs img {
-  width: 45%;
+  justify-self: center;
+  justify-items: baseline;
 }
 
 @media only screen and (max-width: 750px) {
@@ -982,15 +1106,29 @@ footer .max-width :nth-child(3) :nth-child(2) {
   .documents.single .doc-imgs img {
     width: 100%;
   }
-  .documents.single > div > div {
-    justify-content: left;
-    justify-items: left;
-  }
 }
 @media only screen and (max-width: 700px) {
   .documents .max-width .doc-imgs {
     grid-template-columns: 1fr;
     gap: 48px;
-    margin-bottom: 2.8em;
+    margin-bottom: 2em;
   }
+  .documents .max-width > div {
+    display: grid;
+  }
+  .documents a {
+    text-align: center;
+  }
+  .documents.single > div > div {
+    justify-items: stretch;
+  }
+  .documents.single .doc-imgs {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+}
+form input,
+form textarea {
+  font-size: 1.6rem;
+  font-family: "SF UI Display", sans-serif;
 }/*# sourceMappingURL=main.css.map */
